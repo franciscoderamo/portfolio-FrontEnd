@@ -1,0 +1,309 @@
+{
+  "user":{
+    "dni": 37204669,
+    "name": "Francisco D'Eramo",
+    "resume": "Fullstack Developer · UX/UI Designer · Film Director",
+    "description": "Produciendo trabajo de calidad como realizador audiovisual. Experiencia en WordPress, diseño UI/UX y conocimientos de desarrollo web.",
+    "whatsapp": "+54 9 (011) 5312-9350",
+    "email": "franciscoderamo@gmail.com",
+    "ubication": "Ciudad de Buenos Aires",
+    "country": "Argentina"
+},
+  "menu":[{
+    "titulo": "Inicio",
+    "icon": "uil-estate nav__icon",
+    "url": "#home"
+  },{
+    "titulo": "Sobre mi",
+    "icon": "uil-user nav__icon",
+    "url": "#about"
+  },{
+    "titulo": "Habilidades",
+    "icon": "uil-file-alt nav__icon",
+    "url": "#skills"
+  },{
+    "titulo": "Servicios",
+    "icon": "uil-briefcase-alt nav__icon",
+    "url": "#services"
+  },{
+    "titulo": "Portfolio",
+    "icon": "uil-scenery nav__icon",
+    "url": "#portfolio"
+  },{
+    "titulo": "Contáctame",
+    "icon": "uil-message nav__icon",
+    "url": "#contact"
+  },{
+    "titulo": "Login",
+    "icon": "uil-estate nav__icon",
+    "url": "/login"
+  }],
+
+  "form": [{
+    "value":{"username": "francisco", "email": "mail@email.com", "password": 12341234}
+    }
+  ],
+
+  "about":{
+    "image": "assets/img/about.jpg",
+    "description": "Soy un amante de viajar, del futbol, el diseño y la programación. A mis 17 años realicé un viaje de intercambio cultural por un año a Portugal. Estudie Lic. en Artes Audiovisuales y desde hace 3 años estudio Ing. en Informática."
+  },
+
+  "experience": [{
+    "id": 1,
+    "ages": "10",
+    "position": "Diseñador Freelance"
+  },
+  {
+    "id": 2,
+    "ages": "07",
+    "position": "Realizador Audiovisual"
+  },
+  {
+    "id": 3,
+    "ages": "03",
+    "position": "Desarrollador Web"
+  }
+],
+  "skillDesigner":[
+    {"id": 0,"name":"Photoshop","percentage":90},
+    {"id": 0,"name":"Ilustrator","percentage":60},
+    {"id": 0,"name":"Premiere","percentage":90},
+    {"id": 0,"name":"After Effect","percentage":80},
+    {"id": 0,"name":"Figma","percentage":75}
+  ],
+  "skillRealizadorAudiovisual":[
+    {"id": 1,"name":"Pre-producción","percentage":80},
+    {"id": 1,"name":"Cámara","percentage":90},
+    {"id": 1,"name":"Sonido","percentage":70},
+    {"id": 1,"name":"Edición","percentage":90},
+    {"id": 1,"name":"Motion Graphics","percentage":60}
+  ],
+  "skillAplicacionesOffice":[
+    {"id": 2,"name":"Microsoft Word","percentage":90},
+    {"id": 2,"name":"Microsoft Excel","percentage":70},
+    {"id": 2,"name":"Microsoft PowerPoint","percentage":80},
+    {"id": 2,"name":"S.O. Windows 7/11","percentage":70}
+  ],
+  "skillWordPress":[
+    {"id": 3,"name":"WordPress","percentage":80},
+    {"id": 3,"name":"WooCommerce","percentage":70},
+    {"id": 3,"name":"Elementor Pro","percentage":70},
+    {"id": 3,"name":"Yoast SEO","percentage":60},
+    {"id": 3,"name":"SSL certificate","percentage":80}
+  ],
+  "skillFrontendDeveloper":[
+    {"id": 4,"name":"HTML","percentage":80},
+    {"id": 4,"name":"CSS","percentage":70},
+    {"id": 4,"name":"Bootstrap","percentage":70},
+    {"id": 4,"name":"JavaScript & TypeScript","percentage":50},
+    {"id": 4,"name":"Git & Github","percentage":70},
+    {"id": 4,"name":"Angular","percentage":60}
+  ],
+  "skillBackendDeveloper":[
+    {"id": 5,"name":"MySQL","percentage":70},
+    {"id": 5,"name":"Git & Github","percentage":70},
+    {"id": 5,"name":"Java","percentage":50},
+    {"id": 5,"name":"JavaScript & TypeScript","percentage":50},
+    {"id": 5,"name":"Spring Boot","percentage":50}
+  ],
+  "skillOtrasTecnologias":[
+    {"id": 6,"name":"Python","percentage":40},
+    {"id": 6,"name":"C++","percentage":30},
+    {"id": 6,"name":"Haskell","percentage":40},
+    {"id": 6,"name":"Prolog","percentage":40},
+    {"id": 6,"name":"Wollok","percentage":40}
+  ],
+
+  "skills": [{
+    "id": "0",
+    "category": "Designer",
+    "icon": "uil-swatchbook",
+    "ages": "10 años"
+  },
+  {
+    "id": "1",
+    "category": "Realizador Audiovisual",
+    "icon": "uil-film",
+    "ages": "7 años"
+  },
+  {
+    "id": "2",
+    "category": "Aplicaciones de Office",
+    "icon": "uil-windows",
+    "ages": "7 años"
+  },
+  {
+    "id": "3",
+    "category": "WordPress developer SSR",
+    "icon": "uil-wordpress-simple",
+    "ages": "3 años"
+  },
+  {
+    "id": "4",
+    "category": "Frontend developer Jr",
+    "icon": "uil-brackets-curly",
+    "ages": "2 años"
+  },
+  {
+    "id": "5",
+    "category": "Backend developer Jr",
+    "icon": "uil-server-network-alt",
+    "ages": "1 año"
+  },
+  {
+    "id": "6",
+    "category": "Otras tecnologías aprendidas",
+    "icon": "uil-arrow",
+    "ages": "6 meses"
+  }
+],
+
+  "studies": [{
+    "id": 0,
+    "career": "Lic. en Artes Audiovisuales",
+    "institution": "UNDAV",
+    "start": 2012,
+    "end": 2015
+  },
+  {
+    "id": 1,
+    "career": "Professional Webmaster",
+    "institution": "UTN",
+    "start": 2016,
+    "end": 2016
+  },
+  {
+    "id": 2,
+    "career": "Ing. en Informática",
+    "institution": "UNDAV",
+    "start": 2020,
+    "end": 2025
+  },
+  {
+    "id": 3,
+    "career": "Argentina Programa",
+    "institution": "Min. Desarrollo, CESSI e INTI",
+    "start": 2022,
+    "end": 2023
+  }
+],
+  "worked": [{
+    "id": 0,
+    "job": "Diseñador gráfico",
+    "business": "La Merced Patagonia Producciones",
+    "start": 2009,
+    "end": 2010
+  },
+  {
+    "id": 1,
+    "job": "Diseñador & E-Commerce Manager",
+    "business": "HTG Computación",
+    "start": 2013,
+    "end": 2015
+  },
+  {
+    "id": 2,
+    "job": "Editor Audiovisual",
+    "business": "La Chispa Films",
+    "start": 2015,
+    "end": 2016
+  },
+  {
+    "id": 3,
+    "job": "Diseñador y Realizador Audiovisual",
+    "business": "Freelance",
+    "start": 2016,
+    "end": 2022
+  }
+],
+  "services": [{
+    "id": 0,
+    "name": "Desarrollo web en WordPress & Diseño Ui/Ux"
+  },
+  {
+    "id": 1,
+    "name": "Realización Audiovisual & Edición de video",
+    "items": ["Videos institucionales y corporativos","Cobertura de eventos y clipping","Video promocional", "Realización en estudio","Motion Graphics","Postproducción audiovisual"]
+  },
+  {
+    "id": 2,
+    "name": "Diseño digital & Community Manager",
+    "items": ["Diseño gráfico","Community Manager","Email marketing", "Facebook Ads & Google Ads"]
+  }
+],
+
+ "task":[
+  {"id_service": 0,"title": "Desarrollo de páginas web"},
+  {"id_service": 0,"title": "Desarrollar la interfaz de usuario"},
+  {"id_service": 0,"title": "Creo interacciones de elementos UX"},
+  {"id_service": 0,"title": "Posicionar la marca de su proyecto o empresa"},
+  {"id_service": 1,"title": "Creo interacciones de elementos UX"}
+ ],
+
+  "portfolio": [{
+    "id": 0,
+    "id_service": 0,
+    "image": "assets/img/portfolio1.jpg",
+    "title": "Website moderno",
+    "description": "Sitio web de EPCIR INGENIERIA, adaptable a todos los dispositivos, con componentes UI e interacciones animadas.",
+    "link": "https://epciringenieria.com.ar/"
+  },
+  {
+    "id": 1,
+    "id_service": 1,
+    "image": "assets/img/portfolio2.jpg",
+    "title": "Reel DAFSCODE",
+    "description": "Un video donde se incluyen diferentes clips de los trabajos realizados a lo largo del año.",
+    "link": "https://www.youtube.com/watch?v=lvvoKjrV87A&ab_channel=Dafscode"
+  },
+  {
+    "id": 2,
+    "id_service": 0,
+    "image": "assets/img/portfolio3.jpg",
+    "title": "Website oficial",
+    "description": "Sitio web responsive del Dpto. de Medio Ambiente, Aseo y Ornato, de la Ilustre Municipalidad de Freire, Chile.",
+    "link": "https://medioambientefreire.cl/"
+  },
+  {
+    "id": 3,
+    "id_service": 0,
+    "image": "assets/img/portfolio4.jpg",
+    "title": "Compostaje Lautaro",
+    "description": "Plataforma colaborativa sobre reciclaje en el marco de una licitación para la Ilustre Municipalidad de Lautaro, Chile.",
+    "link": "#"
+  },
+  {
+    "id": 4,
+    "id_service": 1,
+    "image": "assets/img/portfolio5.jpg",
+    "title": "Video promocional",
+    "description": "Propiedad en venta: Casa estilo mediterranea en Villarrica, Chile.",
+    "link": "https://youtu.be/GIyx2Fm0bq8"
+  },
+  {
+    "id": 5,
+    "id_service": 0,
+    "image": "assets/img/portfolio6.jpg",
+    "title": "Website responsive",
+    "description": "Sitio web de Eficiencia Verde que incluye un blog sobre Educación Ambiental.",
+    "link": "https://eficienciaverde.com.ar/"
+  },
+  {
+    "id": 6,
+    "id_service": 0,
+    "image": "assets/img/portfolio7.jpg",
+    "title": "Tienda online",
+    "description": "Sitio web de Infinita Beauty, un centro-academia de belleza. Tienda realizada con WooCommerce.",
+    "link": "https://infinitabeauty.com.ar/"
+  },
+  {
+    "id":7,
+    "id_service": 0,
+    "image": "assets/img/portfolio8.jpg",
+    "title": "Plataformas E-Learning",
+    "description": "Website My cake your cakes  de la chef July, reconocida pastelera plant based de Colombia.",
+    "link": "https://mycakesyourcakes.com/"
+  }
+]
+}

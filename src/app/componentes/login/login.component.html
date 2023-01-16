@@ -1,0 +1,68 @@
+<!-- <a routerLink="/" routerLinkActive="active ">Inicio</a>
+<a routerLink="profile" routerLinkActive="active" *ngIf="authService.logIn">Perfil</a>
+<a routerLink="login" routerLinkActive="active" *ngIf="!authService.logIn">Login</a>
+<a class ="nav-link" (click)="authService.logout()" href="#" *ngIf="authService.logIn">Logout</a> -->
+
+<!--==================== LOGIN ====================-->
+<section class="section" id="login">
+  <div class="container grid">
+    <h2>Formulario de acceso</h2>
+    <form name="mainForm" [formGroup]="form" (ngSubmit)="onEnviar($event)">
+      <div>
+        <label for="username">Nombre de usuario: </label>
+        <input type="username" formControlName="username" [class.border-danger]="UsernameValid">
+      </div>
+      <!-- Gracias al getter que configuramos en el controlador -->
+      <div *ngIf="Username?.errors  && Username?.touched">
+        <p *ngIf="Username?.hasError('required')" class="error">
+          <b>El username es requerido.</b>
+        </p>
+        <p *ngIf="Username?.errors?.['minlength']" class="error">
+          <b>El username debe debe tener entre 5 y 12 caracteres de longitud.</b>
+        </p>
+        <p *ngIf="Username?.errors?.['maxlength']" class="error">
+          <b>El username debe debe tener entre 5 y 12 caracteres de longitud.</b>
+        </p>
+      </div>
+<!-- ///////////////////////// -->
+      <br/>
+      <div>
+        <label for="email">Email: </label>
+        <input type="email" formControlName="email" [class.border-danger]="MailValid">
+      </div>
+      <!-- Gracias al getter que configuramos en el controlador -->
+      <div *ngIf="Mail?.errors && Mail?.touched">
+        <p *ngIf="Mail?.hasError('required')" class="error">
+          <b>El email es requerido.</b>
+        </p>
+        <p *ngIf="Mail?.hasError('email')" class="error">
+          <b>El formato del email debe ser válido.</b>
+        </p>
+      </div>
+
+      <br/>
+      <div>
+          <label for="exampleInputPassword1" class="form-label">Password: </label>
+          <input type="password" formControlName="password">
+      </div>
+      <!-- Gracias al getter que configuramos en el controlador -->
+      <div *ngIf="Password?.errors  && Password?.touched">
+        <p *ngIf="Password?.hasError('required')" class="error">
+          <b>El password es requerido.</b>
+        </p>
+        <p *ngIf="Password?.errors?.['minlength']" class="error">
+          <b>El password debe ser de 8 o más caracteres.</b>
+        </p>
+      </div>
+      <br/>
+      <div>
+          <button type="submit" [disabled]="!form.valid">Iniciar Sesión</button>
+      </div>
+    </form>
+
+    <div>
+      <p>Un debuger para mostrar que es posible hacer un biding directo al formulario <strong>{{form.value.username}} </strong> <strong>{{form.value.email}} </strong><strong>{{form.value.password}} </strong><p>
+      <br>
+    </div>
+  </div>
+</section>

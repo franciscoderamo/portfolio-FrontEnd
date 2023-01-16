@@ -1,0 +1,13 @@
+
+.accordion-button{
+  background-color: none !important;
+  --bs-accordion-color: none !important;
+  --bs-accordion-bg: none !important;
+  --bs-accordion-border-color: none !important;
+  --bs-accordion-border-width: none !important;
+  --bs-accordion-border-radius: none !important;
+  --bs-accordion-inner-border-radius: none !important;
+}
+.accordion-button:not(.collapsed){
+  background-color: #e7f1ff00 !important;
+}

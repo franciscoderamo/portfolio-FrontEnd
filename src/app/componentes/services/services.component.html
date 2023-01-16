@@ -1,0 +1,173 @@
+<!--==================== Content ====================-->
+<ng-template #content let-c="close" let-d="dismiss">
+  <!-- <ng-container *ngFor="let services of servicesList"> -->
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Desarrollo web en WordPress<br>& Diseño Ui/Ux</h4>
+    {{servicesList.service.id}} - {{servicesList.task.id_service}}
+    <p type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </p>
+  </div>
+  <ng-container *ngFor="let task of servicesList.task">
+    <ng-container *ngIf="servicesList.service.id==task.id_service">
+      {{servicesList.service.id}} - {{task.id_service}}
+      <div class="modal-body">
+        <h4 class="services__modal-title">{{task.title}}</h4>
+      </div>
+    </ng-container>
+  </ng-container>
+  <div class="modal-footer">
+    <!-- <p type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</p> -->
+  </div>
+
+</ng-template>
+
+<!-- <p (click)="open(content)"><a>Ver más</a></p> -->
+
+<!--==================== Content 0 ====================-->
+<ng-template #content0 let-c="close" let-d="dismiss">
+  <!-- <ng-container *ngFor="let services of servicesList"> -->
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Desarrollo web en WordPress<br>& Diseño Ui/Ux</h4>
+    <p type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </p>
+  </div>
+      <div class="modal-body">
+        <ul class="services__modal-services grid">
+          <li class="services__modal-service">
+              <i class="uil uil-check-circle services__modal-icon"></i>
+              <p>Desarrollo de páginas web.</p>
+          </li>
+          <li class="services__modal-service">
+              <i class="uil uil-check-circle services__modal-icon"></i>
+              <p>Desarrollar la interfaz de usuario</p>
+          </li>
+          <li class="services__modal-service">
+              <i class="uil uil-check-circle services__modal-icon"></i>
+              <p>Creo interacciones de elementos UX.</p>
+          </li>
+          <li class="services__modal-service">
+              <i class="uil uil-check-circle services__modal-icon"></i>
+              <p>Posicionar la marca de su proyecto o empresa.</p>
+          </li>
+        </ul>
+      </div>
+  <div class="modal-footer">
+    <!-- <p type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</p> -->
+  </div>
+
+</ng-template>
+
+<!--==================== Content 1 ====================-->
+<ng-template #content1 let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Realización Audiovisual &<br> Edición de video</h4>
+    <p type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </p>
+  </div>
+      <div class="modal-body">
+        <ul class="services__modal-services grid">
+          <li class="services__modal-service">
+              <i class="uil uil-check-circle services__modal-icon"></i>
+              <p>Videos institucionales y corporativos.</p>
+          </li>
+          <li class="services__modal-service">
+              <i class="uil uil-check-circle services__modal-icon"></i>
+              <p>Cobertura de eventos y clipping.</p>
+          </li>
+          <li class="services__modal-service">
+              <i class="uil uil-check-circle services__modal-icon"></i>
+              <p>Video promocional.</p>
+          </li>
+          <li class="services__modal-service">
+              <i class="uil uil-check-circle services__modal-icon"></i>
+              <p>Realización en estudio.</p>
+          </li>
+          <li class="services__modal-service">
+              <i class="uil uil-check-circle services__modal-icon"></i>
+              <p>Motion Graphics.</p>
+          </li>
+          <li class="services__modal-service">
+              <i class="uil uil-check-circle services__modal-icon"></i>
+              <p>Postproducción audiovisual.</p>
+          </li>
+        </ul>
+      </div>
+</ng-template>
+
+<!--==================== Content 2 ====================-->
+<ng-template #content2 let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Diseño digital &<br>Community Manager</h4>
+    <p type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </p>
+  </div>
+      <div class="modal-body">
+        <ul class="services__modal-services grid">
+          <li class="services__modal-service">
+              <i class="uil uil-check-circle services__modal-icon"></i>
+              <p>Diseño gráfico.</p>
+          </li>
+          <li class="services__modal-service">
+              <i class="uil uil-check-circle services__modal-icon"></i>
+              <p>Community Manager.</p>
+          </li>
+          <li class="services__modal-service">
+              <i class="uil uil-check-circle services__modal-icon"></i>
+              <p>Email marketing.</p>
+          </li>
+          <li class="services__modal-service">
+              <i class="uil uil-check-circle services__modal-icon"></i>
+              <p>Facebook Ads & Google Ads.</p>
+          </li>
+        </ul>
+      </div>
+</ng-template>
+
+
+  <!--==================== SERVICES ====================-->
+  <section class="services section" id="services">
+    <h2 class="section__title">Servicios</h2>
+    <span class="section__subtitle">Lo que ofrezco</span>
+
+    <div class="services__container container grid">
+        <!--==================== SERVICES 0 ====================-->
+        <div class="services__content">
+            <div>
+                <i class="uil uil-arrow services__icon"></i>
+                <h3 class="services__title">Desarrollo web en WordPress<br>& Diseño Ui/Ux</h3>
+            </div>
+            <span class="button button--flex button--small button--link services__button" (click)="open(content0)">
+                Ver más
+                <i class="uil uil-arrow-right button__icon"></i>
+            </span>
+        </div>
+        <!--==================== SERVICES 1 ====================-->
+        <div class="services__content">
+            <div>
+                <i class="uil uil-camera services__icon"></i>
+                <h3 class="services__title">Realización Audiovisual &<br> Edición de video</h3>
+            </div>
+
+            <span class="button button--flex button--small button--link services__button" (click)="open(content1)">
+                Ver más
+                <i class="uil uil-arrow-right button__icon"></i>
+            </span>
+        </div>
+        <!--==================== SERVICES 2 ====================-->
+        <div class="services__content">
+            <div>
+                <i class="uil uil-window-grid services__icon"></i>
+                <h3 class="services__title">Diseño digital &<br>Community Manager</h3>
+            </div>
+
+            <span class="button button--flex button--small button--link services__button" (click)="open(content2)">
+                Ver más
+                <i class="uil uil-arrow-right button__icon"></i>
+            </span>
+        </div>
+    </div>
+</section>
