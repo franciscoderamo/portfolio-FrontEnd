@@ -24,7 +24,11 @@ import { LoginComponent } from './componentes/login/login.component';
 import { ProfileComponent } from './componentes/profile/profile.component';
 // Services
 import { CargarScriptsService } from './servicios/cargar-scripts.service';
-import { AuthService } from './servicios/auth.service'
+import { AuthService } from './servicios/auth.service';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideStorage,getStorage } from '@angular/fire/storage'
 
 @NgModule({
   declarations: [
@@ -55,7 +59,10 @@ import { AuthService } from './servicios/auth.service'
     NgbProgressbarModule,
     SwiperModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideStorage(() => getStorage())
 ],
   providers: [
     CargarScriptsService,

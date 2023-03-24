@@ -10,7 +10,7 @@
     <form name="mainForm" [formGroup]="form" (ngSubmit)="onEnviar($event)">
       <div>
         <label for="username">Nombre de usuario: </label>
-        <input type="username" formControlName="username" [class.border-danger]="UsernameValid">
+        <input id="username" type="username" formControlName="username" [class.border-danger]="UsernameValid">
       </div>
       <!-- Gracias al getter que configuramos en el controlador -->
       <div *ngIf="Username?.errors  && Username?.touched">
@@ -28,7 +28,7 @@
       <br/>
       <div>
         <label for="email">Email: </label>
-        <input type="email" formControlName="email" [class.border-danger]="MailValid">
+        <input id="email" type="email" formControlName="email" [class.border-danger]="MailValid">
       </div>
       <!-- Gracias al getter que configuramos en el controlador -->
       <div *ngIf="Mail?.errors && Mail?.touched">
@@ -43,7 +43,7 @@
       <br/>
       <div>
           <label for="exampleInputPassword1" class="form-label">Password: </label>
-          <input type="password" formControlName="password">
+          <input type="password" formControlName="password" id="exampleInputPassword1">
       </div>
       <!-- Gracias al getter que configuramos en el controlador -->
       <div *ngIf="Password?.errors  && Password?.touched">
