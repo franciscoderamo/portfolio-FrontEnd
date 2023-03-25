@@ -1,7 +1,7 @@
 <!--==================== HEADER ====================-->
 <header class="header" id="header">
   <nav class="nav container">
-    <a href="/" class="nav__logo noSelect">Argentina Programa</a>
+    <a href="/portfolio" class="nav__logo noSelect">Argentina Programa</a>
 
     <div class="nav__menu" id="nav-menu">
       <ul class="nav__list grid">
@@ -10,11 +10,17 @@
             <i class="uil {{data.icon}}"></i> {{data.titulo}}
           </a>
         </li>
+        <li (click)="onClick()" class="nav__item">
+          <a href="/login" class="nav__link noSelect active-link">
+            <i class="uil uil-estate nav__icon"></i>Logout
+          </a>
+        </li>
       </ul>
       <i class="uil uil-times nav__close noSelect" id="nav-close"></i>
     </div>
 
     <div class="nav__btns">
+
       <!-- Theme change button -->
       <i class="uil uil-moon change-theme" id="theme-button"></i>
 

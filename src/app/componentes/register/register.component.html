@@ -1,1 +1,32 @@
-<p>register works!</p>
+<section class="section" id="login">
+  <div class="container grid shadow p-5 mb-5 bg-body rounded">
+    <img src="https://argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/sliderimage1/1676134779/banner-ok-argentina-programa.jpg" alt="Argentina Programa">
+    <h2 class="text-center pb-0">Registro de usuario</h2>
+    <form name="mainForm" [formGroup]="formReg" (ngSubmit)="onSubmit()">
+        <br/>
+        <div class="col-12 d-flex p-2">
+          <div class="mb-3 col-6 me-2">
+              <label for="email" class="form-label">Email</label>
+              <input id="email" type="email" class="form-control" formControlName="email">
+          </div>
+          <div class="mb-3 col-6 me-2">
+              <label for="password" class="form-label">Password</label>
+              <input id="password" type="password" class="form-control" formControlName="password">
+          </div>
+
+        </div>
+
+      <div class="d-grid p-2">
+        <input class="btn btn-secondary p-2" type="submit" value="Registrar">
+      </div>
+      <div class="d-grid p-2">
+        <input class="btn btn-danger p-2" (click)="onClick()" type="submit" value="Registrarse con Google">
+      </div>
+      <div class="d-grid gap-2 text-center p-2">
+        <p>¿Ya tienes cuenta de acceso? <a class="text-center" href="/login">Loguearse</a></p>
+      </div>
+    </form>
+    <p class="text-center pb-0"><i>Desarrollado por Francisco D'Eramo</i></p>
+
+  </div>
+</section>

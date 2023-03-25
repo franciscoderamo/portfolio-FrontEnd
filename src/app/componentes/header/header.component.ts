@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
-// import { CargarScriptsService } from 'src/app/servicios/cargar-scripts.service';
+import { PortfolioService } from 'src/app/services/portfolio.service';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -8,12 +9,13 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  // constructor(private scriptservice: CargarScriptsService) {
-  //   this.scriptservice.loadScript();
-  // }
 
   miMenu:any;
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(
+    private datosPortfolio:PortfolioService,
+    private authService: AuthService,
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe(data =>{
@@ -21,4 +23,11 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+  onClick() {
+    this.authService.logout()
+      .then(() => {
+        this.router.navigate(['/login']);
+      })
+      .catch(error => console.log(error));
+  }
 }

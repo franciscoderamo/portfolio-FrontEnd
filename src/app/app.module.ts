@@ -23,8 +23,8 @@ import { CVComponent } from './componentes/cv/cv.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { ProfileComponent } from './componentes/profile/profile.component';
 // Services
-import { CargarScriptsService } from './servicios/cargar-scripts.service';
-import { AuthService } from './servicios/auth.service';
+import { CargarScriptsService } from './services/cargar-scripts.service';
+import { AuthService } from './services/auth.service';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';

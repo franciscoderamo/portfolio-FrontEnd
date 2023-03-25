@@ -1,66 +1,46 @@
 import { Component, OnInit } from '@angular/core';
-// Service
-//import { AuthService } from 'src/app/servicios/auth.service';
-// importamos las librerias de formulario que vamos a necesitar
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-
 export class LoginComponent implements OnInit {
-  form: FormGroup;
-  //email = '';
-  //password = '';
 
-  // Inyectar en el constructor el formBuilder
-  constructor(private formBuilder: FormBuilder){ //, public authService: AuthService
-    ///Creamos el grupo de controles para el formulario de login
-    this.form= this.formBuilder.group({
-      email:['', [Validators.required, Validators.email]],
-      password:['',[Validators.required, Validators.minLength(8)]],
+  formLogin: FormGroup;
 
-   })
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) {
+    this.formLogin = new FormGroup({
+      email: new FormControl(),
+      password: new FormControl()
+    })
   }
 
-  // login(){
-  //   // El servicio authService. login ya redirecciona
-  //   // en caso de inicio de sesión positivo
-  //   this.authService.login(this.email, this.password)
-  // }
-
-  ngOnInit() {}
-
-  get Password(){
-    return this.form.get("password");
+  ngOnInit(): void {
   }
 
-  get Mail(){
-   return this.form.get("email");
+  onSubmit() {
+    this.authService.login(this.formLogin.value)
+      .then(response => {
+        console.log(response);
+        this.router.navigate(['/portfolio/']);
+      })
+      .catch(error => console.log(error));
   }
 
-  get PasswordValid(){
-    return this.Password?.touched && !this.Password?.valid;
+  onClick() {
+    this.authService.loginWithGoogle()
+      .then(response => {
+        //console.log(response);
+        this.router.navigate(['/portfolio/']);
+      })
+      .catch(error => console.log(error))
   }
 
-  get MailValid() {
-    return false
-  }
-
-  onEnviar(event: Event){
-    // Detenemos la propagación o ejecución del compotamiento submit de un form
-    event.preventDefault;
-
-    if (this.form.valid){
-      // Llamamos a nuestro servicio para enviar los datos al servidor
-      // También podríamos ejecutar alguna lógica extra
-      alert("Todo salio bien ¡Enviar formuario!")
-    }else{
-      // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template
-      this.form.markAllAsTouched();
-    }
-
-  }
 }

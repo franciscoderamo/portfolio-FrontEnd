@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -7,9 +10,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  formReg: FormGroup;
 
-  ngOnInit(): void {
+  constructor(
+    private authService: AuthService,
+    private router: Router
+
+  ) {
+    this.formReg = new FormGroup({
+    email: new FormControl(),
+    password: new FormControl()
+    })
+  }
+
+  ngOnInit(): void{
+  }
+
+  onSubmit() {
+    this.authService.register(this.formReg.value)
+    .then(response => {
+      console.log(response);
+      this.router.navigate(['/login'])
+    })
+    .catch(error => console.log(error));
+  }
+
+  onClick() {
+    this.authService.loginWithGoogle()
+      .then(response => {
+        //console.log(response);
+        this.router.navigate(['/portfolio/']);
+      })
+      .catch(error => console.log(error))
   }
 
 }
