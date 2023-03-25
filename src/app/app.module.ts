@@ -21,7 +21,6 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { PageNotFoundComponent } from './componentes/page-not-found/page-not-found.component';
 import { CVComponent } from './componentes/cv/cv.component';
 import { LoginComponent } from './componentes/login/login.component';
-import { ProfileComponent } from './componentes/profile/profile.component';
 // Services
 import { CargarScriptsService } from './services/cargar-scripts.service';
 import { AuthService } from './services/auth.service';
@@ -47,7 +46,6 @@ import { RegisterComponent } from './componentes/register/register.component';
     LoginComponent,
     PageNotFoundComponent,
     CVComponent,
-    ProfileComponent,
     RegisterComponent,
   ],
   imports: [
