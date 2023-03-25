@@ -12,31 +12,27 @@
   "menu":[{
     "titulo": "Inicio",
     "icon": "uil-estate nav__icon",
-    "url": "#home"
+    "url": "portfolio#home"
   },{
     "titulo": "Sobre mi",
     "icon": "uil-user nav__icon",
-    "url": "#about"
+    "url": "portfolio#about"
   },{
     "titulo": "Habilidades",
     "icon": "uil-file-alt nav__icon",
-    "url": "#skills"
+    "url": "portfolio#skills"
   },{
     "titulo": "Servicios",
     "icon": "uil-briefcase-alt nav__icon",
-    "url": "#services"
+    "url": "portfolio#services"
   },{
     "titulo": "Portfolio",
     "icon": "uil-scenery nav__icon",
-    "url": "#portfolio"
+    "url": "portfolio#portfolio"
   },{
     "titulo": "Contáctame",
     "icon": "uil-message nav__icon",
-    "url": "#contact"
-  },{
-    "titulo": "Login",
-    "icon": "uil-estate nav__icon",
-    "url": "/login"
+    "url": "portfolio#contact"
   }],
 
   "form": [{
