@@ -1010,7 +1010,8 @@ img {
     grid-template-columns: repeat(2, 1fr);
   }
   .qualification__sections {
-    display: grid;
+    /*display: grid;*/
+    display: inline-flex;
     grid-template-columns: 0.6fr;
     justify-content: center;
   }
