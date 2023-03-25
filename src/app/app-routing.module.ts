@@ -8,9 +8,10 @@ import { PageNotFoundComponent } from './componentes/page-not-found/page-not-fou
 import { ProfileComponent } from './componentes/profile/profile.component';
 
 const routes: Routes = [
-  {path: '', component: CVComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'portfolio', component: CVComponent},
   {path: 'profile', component: ProfileComponent},//Agregar canActivate: [AuthGuard]} solo es accesible si el usuario esta logueado
+  {path: '', redirectTo:'login',pathMatch:'full'},
   {path: '**', component: PageNotFoundComponent}
 ];
 

@@ -8,23 +8,6 @@
   <div class="container grid">
     <h2>Formulario de acceso</h2>
     <form name="mainForm" [formGroup]="form" (ngSubmit)="onEnviar($event)">
-      <div>
-        <label for="username">Nombre de usuario: </label>
-        <input id="username" type="username" formControlName="username" [class.border-danger]="UsernameValid">
-      </div>
-      <!-- Gracias al getter que configuramos en el controlador -->
-      <div *ngIf="Username?.errors  && Username?.touched">
-        <p *ngIf="Username?.hasError('required')" class="error">
-          <b>El username es requerido.</b>
-        </p>
-        <p *ngIf="Username?.errors?.['minlength']" class="error">
-          <b>El username debe debe tener entre 5 y 12 caracteres de longitud.</b>
-        </p>
-        <p *ngIf="Username?.errors?.['maxlength']" class="error">
-          <b>El username debe debe tener entre 5 y 12 caracteres de longitud.</b>
-        </p>
-      </div>
-<!-- ///////////////////////// -->
       <br/>
       <div>
         <label for="email">Email: </label>

@@ -28,7 +28,7 @@ import { AuthService } from './servicios/auth.service';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideStorage,getStorage } from '@angular/fire/storage'
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -46,7 +46,7 @@ import { provideStorage,getStorage } from '@angular/fire/storage'
     LoginComponent,
     PageNotFoundComponent,
     CVComponent,
-    ProfileComponent
+    ProfileComponent,
   ],
   imports: [
     AppRoutingModule,
