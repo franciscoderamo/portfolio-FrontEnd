@@ -104,8 +104,8 @@
             "prerender": false,
             "ssr": false,
             "browserTarget": "Portfolio:build:production",
-            "firebaseProject": "portfolio-c7e65",
-            "firebaseHostingSite": "portfolio-c7e65"
+            "firebaseProject": "portfolio-francisco-deramo",
+            "firebaseHostingSite": "portfolio-francisco-deramo"
           }
         }
       }
