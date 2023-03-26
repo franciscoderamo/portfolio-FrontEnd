@@ -29,6 +29,8 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { RegisterComponent } from './componentes/register/register.component';
+import { DashboardComponent } from './componentes/dashboard/dashboard.component';
+import { PersonComponent } from './componentes/modal/person/person.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,8 @@ import { RegisterComponent } from './componentes/register/register.component';
     PageNotFoundComponent,
     CVComponent,
     RegisterComponent,
+    DashboardComponent,
+    PersonComponent,
   ],
   imports: [
     AppRoutingModule,
