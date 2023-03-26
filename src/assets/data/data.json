@@ -24,7 +24,7 @@
   },{
     "titulo": "Servicios",
     "icon": "uil-briefcase-alt nav__icon",
-    "url": "#services"
+    "url": "o#services"
   },{
     "titulo": "Portfolio",
     "icon": "uil-scenery nav__icon",
@@ -33,10 +33,6 @@
     "titulo": "Contáctame",
     "icon": "uil-message nav__icon",
     "url": "#contact"
-  },{
-    "titulo": "Login",
-    "icon": "uil-estate nav__icon",
-    "url": "/login"
   }],
 
   "form": [{

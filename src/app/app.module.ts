@@ -21,10 +21,16 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { PageNotFoundComponent } from './componentes/page-not-found/page-not-found.component';
 import { CVComponent } from './componentes/cv/cv.component';
 import { LoginComponent } from './componentes/login/login.component';
-import { ProfileComponent } from './componentes/profile/profile.component';
 // Services
-import { CargarScriptsService } from './servicios/cargar-scripts.service';
-import { AuthService } from './servicios/auth.service'
+import { CargarScriptsService } from './services/cargar-scripts.service';
+import { AuthService } from './services/auth.service';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { RegisterComponent } from './componentes/register/register.component';
+import { DashboardComponent } from './componentes/dashboard/dashboard.component';
+import { PersonComponent } from './componentes/modal/person/person.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +48,9 @@ import { AuthService } from './servicios/auth.service'
     LoginComponent,
     PageNotFoundComponent,
     CVComponent,
-    ProfileComponent
+    RegisterComponent,
+    DashboardComponent,
+    PersonComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -55,7 +63,10 @@ import { AuthService } from './servicios/auth.service'
     NgbProgressbarModule,
     SwiperModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideStorage(() => getStorage())
 ],
   providers: [
     CargarScriptsService,

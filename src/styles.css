@@ -904,7 +904,7 @@ img {
   bottom: -20%;
   background-color: var(--first-color);
   opacity: 0.8;
-  padding: 0 0.3rem;
+  padding: 0 0.5rem 0 0;
   border-radius: 0.4rem;
   z-index: var(--z-tooltip);
   transform: 0.4s;
@@ -1010,7 +1010,8 @@ img {
     grid-template-columns: repeat(2, 1fr);
   }
   .qualification__sections {
-    display: grid;
+    /*display: grid;*/
+    display: inline-flex;
     grid-template-columns: 0.6fr;
     justify-content: center;
   }
