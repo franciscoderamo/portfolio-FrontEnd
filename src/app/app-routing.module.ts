@@ -7,13 +7,14 @@ import { LoginComponent } from './componentes/login/login.component';
 import { CVComponent } from './componentes/cv/cv.component';
 import { PageNotFoundComponent } from './componentes/page-not-found/page-not-found.component';
 import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 
 const routes: Routes = [
-  {path: '', pathMatch:'full', redirectTo:'login'},
+  {path: '', component: CVComponent},
   {
-    path: 'portfolio',
-    component: CVComponent,
-    ...canActivate(() => redirectUnauthorizedTo(['/register']))
+    path: 'dashboard',
+    component: DashboardComponent,
+    ...canActivate(() => redirectUnauthorizedTo(['/login']))
   },
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
