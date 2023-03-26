@@ -14,7 +14,7 @@ export class PersonComponent implements OnInit {
   form: FormGroup;
   person: Person[] = [];
 
-  constructor(private formBuilder: FormBuilder, private PersonService: PersonService) {
+  constructor(private formBuilder: FormBuilder, private personService: PersonService) {
     this.form = this.formBuilder.group({
       id: [''],
       nombreperfil: ['', [Validators.required]],
@@ -30,7 +30,7 @@ export class PersonComponent implements OnInit {
   }
 
   cargarPersona(): void {
-    this.PersonService.getPerson().subscribe(
+    this.personService.getPerson().subscribe(
       data => {
         this.person = data;
       }
@@ -38,7 +38,7 @@ export class PersonComponent implements OnInit {
   }
 
   cargarDetalle(id: number) {
-    this.PersonService.seePerson(id).subscribe(
+    this.personService.seePerson(id).subscribe(
       {
         next: (data) => {
           this.form.setValue(data);
@@ -52,7 +52,7 @@ export class PersonComponent implements OnInit {
     )
   }
 
-  //👇 esto es solo para hacer pruebas en local
+  // esto es solo para hacer pruebas en local
   onImagenSeleccionada(e: any) {
     let nombreImagen = e.target.files[0].name
     let url = 'assets/img/' + nombreImagen;
@@ -64,7 +64,7 @@ export class PersonComponent implements OnInit {
     let per = this.form.value;
 
     if (per.id == '') {
-      this.PersonService.addPerson(per).subscribe(
+      this.personService.addPerson(per).subscribe(
         data => {
           alert("Persona añadida");
           this.cargarPersona();
@@ -72,7 +72,7 @@ export class PersonComponent implements OnInit {
         }
       )
     } else {
-      this.PersonService.editPerson(per).subscribe(
+      this.personService.editPerson(per).subscribe(
         data => {
           alert("Persona modificada");
           this.cargarPersona();
@@ -83,7 +83,7 @@ export class PersonComponent implements OnInit {
   }
 
   delete(id: number) {
-    this.PersonService.deletePerson(id).subscribe(
+    this.personService.deletePerson(id).subscribe(
       {
         next: data => {
           alert("Se elimino satisfactoriamente");
