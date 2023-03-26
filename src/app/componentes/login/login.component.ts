@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
     this.authService.login(this.formLogin.value)
       .then(response => {
         console.log(response);
-        this.router.navigate(['/portfolio/']);
+        this.router.navigate(['/dashboard/']);
       })
       .catch(error => console.log(error));
   }
@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
     this.authService.loginWithGoogle()
       .then(response => {
         //console.log(response);
-        this.router.navigate(['/portfolio/']);
+        this.router.navigate(['/dashboard/']);
       })
       .catch(error => console.log(error))
   }
