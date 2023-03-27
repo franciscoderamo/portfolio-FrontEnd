@@ -32,6 +32,11 @@ import { RegisterComponent } from './componentes/register/register.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 import { PersonComponent } from './componentes/modal/person/person.component';
 import { ExperienceComponent } from './componentes/modal/experience/experience/experience.component';
+import { SkillGroupComponent } from './componentes/modal/skill-group/skill-group/skill-group.component';
+import { SkillComponent } from './componentes/modal/skill/skill/skill.component';
+import { StudiesComponent } from './componentes/modal/studies/studies/studies.component';
+import { TaskComponent } from './componentes/modal/task/task/task.component';
+import { WorkedComponent } from './componentes/modal/worked/worked/worked.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +58,11 @@ import { ExperienceComponent } from './componentes/modal/experience/experience/e
     DashboardComponent,
     PersonComponent,
     ExperienceComponent,
+    SkillGroupComponent,
+    SkillComponent,
+    StudiesComponent,
+    TaskComponent,
+    WorkedComponent,
   ],
   imports: [
     AppRoutingModule,
