@@ -17,83 +17,91 @@ export class PersonComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private personService: PersonService) {
     this.form = this.formBuilder.group({
       id: [''],
-      nombreperfil: ['', [Validators.required]],
-      tituloperfil: ['', [Validators.required]],
-      acercaDeMi: ['', [Validators.required]],
-      imagen: ['', [Validators.required]],
-      banner: ['', [Validators.required]],
+      name: ['', [Validators.required]],
+      resume: ['', [Validators.required]],
+      description: ['', [Validators.required]],
+      about: ['', [Validators.required]],
+      image: [''],
+      whatsapp: [''],
+      github: [''],
+      linkedin: [''],
+      email: [''],
+      ubication: ['', [Validators.required]],
+      country: ['', [Validators.required]],
+      curriculum: [''],
     })
   }
 
   ngOnInit(): void {
-    this.cargarPersona();
+    // this.cargarPersona();
   }
 
-  cargarPersona(): void {
-    this.personService.getPerson().subscribe(
-      data => {
-        this.person = data;
-      }
-    )
-  }
+  // cargarPersona(): void {
+  //   this.personService.getPerson().subscribe(
+  //     data => {
+  //       this.person = data;
+  //     }
+  //   )
+  // }
 
-  cargarDetalle(id: number) {
-    this.personService.seePerson(id).subscribe(
-      {
-        next: (data) => {
-          this.form.setValue(data);
-        },
-        error: (e) => {
-          console.error(e)
-          alert("error al modificar")
-        },
-        complete: () => console.info('complete')
-      }
-    )
-  }
+  // cargarDetalle(id: number) {
+  //   this.personService.seePerson(id).subscribe(
+  //     {
+  //       next: (data) => {
+  //         this.form.setValue(data);
+  //       },
+  //       error: (e) => {
+  //         console.error(e)
+  //         alert("Error al modificar")
+  //       },
+  //       complete: () => console.info('Complete')
+  //     }
+  //   )
+  // }
 
-  // esto es solo para hacer pruebas en local
-  onImagenSeleccionada(e: any) {
-    let nombreImagen = e.target.files[0].name
-    let url = 'assets/img/' + nombreImagen;
-    this.form.patchValue({ imagen: url });
-    console.log(url);
-  }
+  // // esto es solo para hacer pruebas en local
+  // onImagenSeleccionada(e: any) {
+  //   let nombreImagen = e.target.files[0].name
+  //   let url = 'assets/img/' + nombreImagen;
+  //   this.form.patchValue({ imagen: url });
+  //   console.log(url);
+  // }
 
-  guardar() {
-    let per = this.form.value;
+  // edit() {
+  //   let person = this.form.value;
 
-    if (per.id == '') {
-      this.personService.addPerson(per).subscribe(
-        data => {
-          alert("Persona añadida");
-          this.cargarPersona();
-          this.form.reset();
-        }
-      )
-    } else {
-      this.personService.editPerson(per).subscribe(
-        data => {
-          alert("Persona modificada");
-          this.cargarPersona();
-          this.form.reset();
-        }
-      )
-    }
-  }
+  //   if (person.id == '') {
+  //     this.personService.addPerson(person).subscribe(
+  //       data => {
+  //         alert("Persona añadida");
+  //         this.cargarPersona();
+  //         this.form.reset();
+  //       }
+  //     )
+  //   } else {
+  //     this.personService.editPerson(person).subscribe(
+  //       data => {
+  //         alert("Persona modificada");
+  //         this.cargarPersona();
+  //         this.form.reset();
+  //       }
+  //     )
+  //   }
+  // }
 
-  delete(id: number) {
-    this.personService.deletePerson(id).subscribe(
-      {
-        next: data => {
-          alert("Se elimino satisfactoriamente");
-          this.cargarPersona()
-        },
-        error: err => {
-          console.error(err)
-          alert("No se pudo eliminar")
-        }
-      }
-    )
-  }
+  // delete(id: number) {
+  //   this.personService.deletePerson(id).subscribe(
+  //     {
+  //       next: data => {
+  //         alert("Se elimino satisfactoriamente");
+  //         this.cargarPersona()
+  //       },
+  //       error: err => {
+  //         console.error(err)
+  //         alert("No se pudo eliminar")
+  //       }
+  //     }
+  //   )
+  // }
+
 }
