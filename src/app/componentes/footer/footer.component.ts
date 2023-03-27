@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/services/portfolio.service';
+import { PortfolioService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-footer',
@@ -12,7 +12,6 @@ export class FooterComponent implements OnInit {
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe(data =>{
-      console.log(data);
       this.miPortfolio=data;
     });
   }

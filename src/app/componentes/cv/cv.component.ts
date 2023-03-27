@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/services/portfolio.service';
+import { PortfolioService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-cv',
