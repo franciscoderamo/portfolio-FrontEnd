@@ -1,6 +1,6 @@
 //import { ViewEncapsulation } from '@angular/compiler';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { PortfolioService } from 'src/app/services/portfolio.service';
+import { PortfolioService } from 'src/app/services/data.service';
 // import Swiper core and required modules
 import SwiperCore, { Navigation, Pagination } from 'swiper';
 

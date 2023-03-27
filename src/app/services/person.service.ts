@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+//import { environment } from 'src/environments/environment';
 import { Person } from '../model/person';
 
 @Injectable({
@@ -8,28 +9,29 @@ import { Person } from '../model/person';
 })
 export class PersonService {
 
-  //url = 'https://localhost:8080/person/';
-  url = 'https://portfolio-francisco-deramo.onrender.com';
+  URL = 'http://localhost:8080/person/'; // 'https://portfolio-francisco-deramo.onrender.com/person/';
 
-  constructor(private http: HttpClient) { }
+  //URL = environment.URL + 'person/';
 
-  public getPerson(): Observable<Person[]> {
-    return this.http.get<Person[]>(this.url + 'all');
+  constructor(private httpClient: HttpClient) { }
+
+  public all(): Observable<Person[]>{
+    return this.httpClient.get<Person[]>(this.URL + 'all');
   }
 
-  public seePerson(id: number): Observable<Person> {
-    return this.http.get<Person>(this.url + `see/${id}`);
+  // public see(id: number): Observable<Person>{
+  //   return this.httpClient.get<Person>(this.URL + `see/${id}`);
+  // }
+
+  // public new(person: Person): Observable<any>{
+  //   return this.httpClient.post<any>(this.URL + 'new', person);
+  // }
+
+  public edit(id: number, person: Person): Observable<any>{
+    return this.httpClient.put<any>(this.URL + `edit/${id}`, person);
   }
 
-  public addPerson(per: Person): Observable<any> {
-    return this.http.post<any>(this.url + 'new', per);
-  }
-
-  public editPerson(per: Person): Observable<any> {
-    return this.http.put<any>(this.url + 'edit', per);
-  }
-
-  public deletePerson(id: number): Observable<any> {
-    return this.http.delete<any>(this.url + `delete/${id}`);
-  }
+  // public delete(id: number): Observable<any>{
+  //   return this.httpClient.delete<any>(this.URL + `delete/${id}`);
+  // }
 }

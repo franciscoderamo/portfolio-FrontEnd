@@ -31,6 +31,7 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 import { RegisterComponent } from './componentes/register/register.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 import { PersonComponent } from './componentes/modal/person/person.component';
+import { ExperienceComponent } from './componentes/modal/experience/experience/experience.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { PersonComponent } from './componentes/modal/person/person.component';
     RegisterComponent,
     DashboardComponent,
     PersonComponent,
+    ExperienceComponent,
   ],
   imports: [
     AppRoutingModule,

@@ -1,8 +1,11 @@
-<!-- Modal datos personales -->
-<!--<div
-  class="modal fade" id="bannerModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-  aria-hidden="true">-->
-  <div class="modal fade" id="personModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal Sobre mi -->
+  <!-- <div
+  class="modal fade"
+  id="personModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -41,6 +44,7 @@
                 </button>
               </span>
             </li>
+            <p>Lista</p>
           </ul>
           <div class="input-group mb-3 bg-light" *ngIf="!!form.value.id">
             <div class="input-group-prepend border-0">
@@ -172,10 +176,14 @@
                     form.get('tituloperfil')?.errors &&
                     form.get('tituloperfil')?.touched
                 }"
-              />
+              />-->
+
+
               <!-- [ngClass]="{'is-invalid': Tituloperfil?.errors && Tituloperfil?.touched, 'is-valid': !Tituloperfil?.errors && Tituloperfil?.touched}">
             <div *ngIf="Tituloperfil?.errors && Tituloperfil?.touched"-->
-              <p
+
+
+              <!--<p
                 class="text-danger"
                 *ngIf="form.get('tituloperfil')?.touched && form.get('tituloperfil')?.errors?.['required']"
               >
@@ -215,4 +223,4 @@
       </form>
     </div>
   </div>
-</div>
+</div> -->
