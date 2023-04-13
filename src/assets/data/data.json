@@ -178,9 +178,16 @@
   },
   {
     "id": 3,
-    "career": "Argentina Programa",
+    "career": "Developer Full Stack Jr - Argentina Programa",
     "institution": "Min. Desarrollo, CESSI e INTI",
     "start": 2022,
+    "end": 2023
+  },
+  {
+    "id": 4,
+    "career": "Bootcamp Developer Front End",
+    "institution": "MindHub & Argentina Programa",
+    "start": 2023,
     "end": 2023
   }
 ],
