@@ -353,7 +353,7 @@ img {
   margin-bottom: var(--mb-2) ;
 }
 .home__scroll{
-  dispLay: none;
+  display: none;
 }
 .home__scroll-button{
   color: var(--first-color) ;
