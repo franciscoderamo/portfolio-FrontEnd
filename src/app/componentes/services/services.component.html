@@ -1,38 +1,38 @@
-<!--==================== Content 0 ====================-->
-<ng-template #content1 let-c="close" let-d="dismiss">
-  <!-- <ng-container *ngFor="let services of servicesList"> -->
-  <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Desarrollo web en WordPress<br>& Diseño Ui/Ux</h4>
-    <p type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </p>
-  </div>
-    <div class="modal-body">
-      <ul class="services__modal-services grid">
-        <li class="services__modal-service" *ngFor="let taskList of task">
-            <i class="uil uil-check-circle services__modal-icon"></i>
-            <p>{{taskList.title}}</p>
-        </li>
-      </ul>
-    </div>
-</ng-template>
-
-  <!--==================== SECTION SERVICES ====================-->
+<!--==================== SECTION SERVICES ====================-->
 <section class="services section" id="services">
   <h2 class="section__title">Servicios</h2>
   <span class="section__subtitle">Lo que ofrezco</span>
 
   <div class="services__container container grid">
-    <!--==================== SERVICES 0 ====================-->
+    <!--==================== SERVICES ====================-->
     <div class="services__content" *ngFor="let servicesList of services">
         <div>
             <i class="uil uil-{{servicesList.icon}} services__icon"></i>
             <h3 class="services__title">{{servicesList.name}}</h3>
         </div>
-        <span class="button button--flex button--small button--link services__button" (click)="open(content1)">
+        <span class="button button--flex button--small button--link services__button" (click)="open(content)">
             Ver más
             <i class="uil uil-arrow-right button__icon"></i>
         </span>
+        <!--==================== Content modal ====================-->
+        <ng-template let-c="close" let-d="dismiss" #content >
+          <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">{{servicesList.name}}</h4>
+            <p type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+              <span aria-hidden="true">&times;</span>
+            </p>
+          </div>
+            <div class="modal-body">
+              <div *ngFor="let taskList of task">
+                <ul class="services__modal-services grid" *ngIf="taskList.idService==servicesList.id">
+                  <li class="services__modal-service" *ngIf="taskList.idService==servicesList.id">
+                      <i class="uil uil-check-circle services__modal-icon" *ngIf="taskList.idService==servicesList.id"></i>
+                      <p *ngIf="taskList.idService==servicesList.id">{{taskList.title}}</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </ng-template>
     </div>
   </div>
 </section>
