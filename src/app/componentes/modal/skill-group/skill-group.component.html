@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="modal-header d-flex flex-row mb-3">
+    <h3>Administrar categoría de habilidades</h3>
+    <button class="button__add button__flex"><i class="uil uil-plus" routerLink="/new-skillgroup" title="Nueva categoría"></i></button>
+  </div>
+  <div class="container">
+    <table class="table">
+      <tbody>
+        <tr>
+          <td><b>ID</b></td>
+          <td><b>Categoría</b></td>
+          <td><b>Años</b></td>
+          <td><b>Icono</b></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr *ngFor="let skillGroupList of skillGroup">
+          <td>{{skillGroupList.id}}</td>
+          <td>{{skillGroupList.category}}</td>
+          <td>{{skillGroupList.ages}}</td>
+          <td><i class="skillGroup__icon uil uil-{{skillGroupList.icon}}"></i></td>
+          <td><i class="uil uil-pen btn__edit" routerLink="/edit-skillgroup/{{skillGroupList.id}}" title="Editar"></i></td>
+          <td><i class="uil uil-trash-alt btn__delete" (click)="deleteSkillGroup(skillGroupList.id)" title="Eliminar"></i></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

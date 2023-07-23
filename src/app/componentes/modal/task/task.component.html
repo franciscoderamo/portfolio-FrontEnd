@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="modal-header d-flex flex-row mb-3">
+    <h3>Administrar los microservicios</h3>
+    <button class="button__add button__flex"><i class="uil uil-plus" routerLink="/new-task" title="Nueva tarea"></i></button>
+  </div>
+  <div class="container">
+    <table class="table">
+      <tbody>
+        <tr>
+          <td><b>ID</b></td>
+          <td><b>Título</b></td>
+          <td><b>ID Servicio</b></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr *ngFor="let taskList of task">
+          <td>{{taskList.id}}</td>
+          <td>{{taskList.title}}</td>
+          <td>{{taskList.idService}}</td>
+          <td><i class="uil uil-pen btn__edit" routerLink="/edit-task/{{taskList.id}}" title="Editar"></i></td>
+          <td><i class="uil uil-trash-alt btn__delete" (click)="deleteTask(taskList.id)" title="Eliminar"></i></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

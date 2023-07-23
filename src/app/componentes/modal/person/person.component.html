@@ -1,5 +1,5 @@
-<!-- Modal Sobre mi -->
-  <!-- <div
+<!-- Modal Sobre mi
+  <div
   class="modal fade"
   id="personModal"
   tabindex="-1"
@@ -176,14 +176,14 @@
                     form.get('tituloperfil')?.errors &&
                     form.get('tituloperfil')?.touched
                 }"
-              />-->
+              /> -->
 
 
               <!-- [ngClass]="{'is-invalid': Tituloperfil?.errors && Tituloperfil?.touched, 'is-valid': !Tituloperfil?.errors && Tituloperfil?.touched}">
             <div *ngIf="Tituloperfil?.errors && Tituloperfil?.touched"-->
 
-
-              <!--<p
+              <!--
+              <p
                 class="text-danger"
                 *ngIf="form.get('tituloperfil')?.touched && form.get('tituloperfil')?.errors?.['required']"
               >
@@ -218,9 +218,72 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" (click)="form.reset()"> Reset </button>
-          <button type="button" class="btn btn-primary" (click)="guardar()"[disabled]="form.invalid"> Guardar</button>
+          <button type="button" class="btn btn-primary" (click)="edit()"[disabled]="form.invalid"> Guardar</button>
         </div>
       </form>
     </div>
   </div>
-</div> -->
+</div>-->
+
+
+<!-- Modal datos personales
+<div
+  class="modal fade" id="bannerModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+<div
+  class="modal"
+  id="datosModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+> -->
+  <div class="modal-dialog">
+    <div class="modal-content" *ngFor="let personList of person">
+      <div class="modal-header d-flex flex-row mb-3">
+        <h3>Administrar datos personales</h3>
+        <button class="button__add button__flex"><i class="uil uil-pen" routerLink="/edit-person/{{personList.id}}" title="Editar"></i></button>
+      </div>
+        <table class="m-3">
+          <tbody class="text-start list__item">
+            <tr>
+              <td><b>Nombre completo: </b>{{personList.name}}</td>
+            </tr>
+            <tr>
+              <td><b>Resumen: </b>{{personList.resume}}</td>
+            </tr>
+            <tr>
+              <td><b>Descripción: </b>{{personList.description}}</td>
+            </tr>
+            <tr>
+              <td><b>Sobre mi: </b>{{personList.about}}</td>
+            </tr>
+            <tr>
+              <td><b>Enlace a imagen de perfil: </b>{{personList.image}}</td>
+            </tr>
+            <tr>
+              <td><b>Whatsapp: </b>{{personList.whatsapp}}</td>
+            </tr>
+            <tr>
+              <td><b>GitHub: </b>{{personList.github}}</td>
+            </tr>
+            <tr>
+              <td><b>Linkedin: </b>{{personList.linkedin}}</td>
+            </tr>
+            <tr>
+              <td><b>Email: </b>{{personList.email}}</td>
+            </tr>
+            <tr>
+              <td><b>Ubicación: </b>{{personList.ubication}}</td>
+            </tr>
+            <tr>
+              <td><b>País: </b>{{personList.country}}</td>
+            </tr>
+            <tr>
+              <td><b>Curriculum: </b>{{personList.curriculum}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+    </div>
+  </div>
+<!-- </div> -->

@@ -3,15 +3,15 @@
     <h2 class="section__title">Sobre mi</h2>
     <span class="section__subtitle">Te cuento un poco de mi</span>
     <div class="about__container container grid">
-        <img [src]="about.image" alt="" class="about__img">
+        <img [src]="person.image" alt="" class="about__img">
         <div class="about__data">
-            <p class="about__description">{{about.description}}</p>
+            <p class="about__description">{{person.description}}</p>
             <div class="about__info">
               <ul>
-                <li class="about__experience" *ngFor="let experiences of experienceList">
+                <li class="about__experience" *ngFor="let experienceList of experience">
                   <div>
-                      <span class="about__info-title">{{experiences.ages}}+</span>
-                      <span class="about__info-name">Años como<br><strong>{{experiences.position}}</strong></span>
+                      <span class="about__info-title">{{experienceList.ages}}+</span>
+                      <span class="about__info-name">Años como<br><strong>{{experienceList.position}}</strong></span>
                   </div>
                 </li>
               </ul>

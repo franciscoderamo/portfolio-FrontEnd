@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="modal-header d-flex flex-row mb-3">
+    <h3>Administrar portfolio</h3>
+    <button class="button__add button__flex"><i class="uil uil-plus" routerLink="/new-portfolio" title="Nuevo portfolio"></i></button>
+  </div>
+  <div class="container">
+    <table class="table">
+      <tbody>
+        <tr>
+          <td><b>ID</b></td>
+          <td><b>Título</b></td>
+          <td width="100"><b>Descripción</b></td>
+          <td><b>URL imagen</b></td>
+          <td><b>Enlace</b></td>
+          <td><b>ID Servicio</b></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr *ngFor="let portfolioList of portfolio">
+          <td>{{portfolioList.id}}</td>
+          <td>{{portfolioList.title}}</td>
+          <td>{{portfolioList.description}}</td>
+          <td><a [href]="portfolioList.image">Imagen</a></td>
+          <td><a [href]="portfolioList.link">Link</a></td>
+          <td>{{portfolioList.idService}}</td>
+          <td><i class="uil uil-pen btn__edit" routerLink="/edit-portfolio/{{portfolioList.id}}" title="Editar"></i></td>
+          <td><i class="uil uil-trash-alt btn__delete" (click)="deletePortfolio(portfolioList.id)" title="Eliminar"></i></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Person } from 'src/app/model/person';
+import { Person } from 'src/app/model/person.model';
 import { PersonService } from 'src/app/services/person.service';
 
 @Component({
-  selector: 'app-person',
+  selector: 'app-modal-person',
   templateUrl: './person.component.html',
   styleUrls: ['./person.component.css']
 })
@@ -12,7 +12,7 @@ import { PersonService } from 'src/app/services/person.service';
 export class PersonComponent implements OnInit {
 
   form: FormGroup;
-  person: Person[] = [];
+  person: Person [] = [];
 
   constructor(private formBuilder: FormBuilder, private personService: PersonService) {
     this.form = this.formBuilder.group({
@@ -33,31 +33,15 @@ export class PersonComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.cargarPersona();
+    this.cargarPersona();
   }
 
-  // cargarPersona(): void {
-  //   this.personService.getPerson().subscribe(
-  //     data => {
-  //       this.person = data;
-  //     }
-  //   )
-  // }
-
-  // cargarDetalle(id: number) {
-  //   this.personService.seePerson(id).subscribe(
-  //     {
-  //       next: (data) => {
-  //         this.form.setValue(data);
-  //       },
-  //       error: (e) => {
-  //         console.error(e)
-  //         alert("Error al modificar")
-  //       },
-  //       complete: () => console.info('Complete')
-  //     }
-  //   )
-  // }
+  cargarPersona(): void {
+    this.personService.all().subscribe(data => {
+        this.person = data;
+      }
+    )
+  }
 
   // // esto es solo para hacer pruebas en local
   // onImagenSeleccionada(e: any) {
@@ -71,7 +55,7 @@ export class PersonComponent implements OnInit {
   //   let person = this.form.value;
 
   //   if (person.id == '') {
-  //     this.personService.addPerson(person).subscribe(
+  //     this.personService.new(person).subscribe(
   //       data => {
   //         alert("Persona añadida");
   //         this.cargarPersona();
@@ -79,7 +63,7 @@ export class PersonComponent implements OnInit {
   //       }
   //     )
   //   } else {
-  //     this.personService.editPerson(person).subscribe(
+  //     this.personService.edit(person.id, person).subscribe(
   //       data => {
   //         alert("Persona modificada");
   //         this.cargarPersona();
@@ -90,7 +74,7 @@ export class PersonComponent implements OnInit {
   // }
 
   // delete(id: number) {
-  //   this.personService.deletePerson(id).subscribe(
+  //   this.personService.delete(id).subscribe(
   //     {
   //       next: data => {
   //         alert("Se elimino satisfactoriamente");

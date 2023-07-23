@@ -1,26 +1,33 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/services/data.service';
-//import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+//import { PortfolioService } from 'src/app/services/data.service';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Services } from 'src/app/model/services.model';
+import { Task } from 'src/app/model/task.model';
+import { ServicesService } from 'src/app/services/services.service';
+import { TaskService } from 'src/app/services/task.service';
 
 @Component({
   selector: 'app-services',
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.css'],
-  //providers: [NgbModalConfig, NgbModal]
 })
+
 export class ServicesComponent implements OnInit {
-  servicesList:any;
-  constructor(private datosPortfolio:PortfolioService,config: NgbModalConfig, private modalService: NgbModal) {
+  services: Services [] = [];
+  task: Task [] = [];
+
+  constructor(private servicesService:ServicesService, private taskService: TaskService,config: NgbModalConfig, private modalService: NgbModal) {
     config.backdrop = 'static';
     config.keyboard = false;
     config.centered = true;
   }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{
-      console.log(data);
-      this.servicesList=data;
+    this.taskService.all().subscribe(data =>{
+      this.task=data;
+    }),
+    this.servicesService.all().subscribe(data =>{
+      this.services=data;
     });
   }
 
@@ -28,15 +35,7 @@ export class ServicesComponent implements OnInit {
     this.modalService.open(content);
   }
 
-  // export class ServicesComponent implements OnInit {
-  //   miPortfolio:any;
-  //   constructor(private datosPortfolio:PortfolioService) { }
-
-  //   ngOnInit(): void {
-  //     this.datosPortfolio.obtenerDatos().subscribe(data =>{
-  //       console.log(data);
-  //       this.miPortfolio=data;
-  //     });
-  //   }
-
+  rastrearPor(indice: number, elemento: number) {
+    //console.log(indice, elemento);
+  }
 }

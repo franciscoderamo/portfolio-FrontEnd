@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/services/data.service';
+import { Person } from 'src/app/model/person.model';
+import { Experience } from 'src/app/model/experience.model';
+import { PersonService } from 'src/app/services/person.service';
+import { ExperienceService } from 'src/app/services/experience.service';
+
 
 @Component({
   selector: 'app-about',
@@ -7,15 +11,18 @@ import { PortfolioService } from 'src/app/services/data.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  about:any;
-  experienceList:any;
-  constructor(private datosPortfolio:PortfolioService) { }
+  person!: Person;
+  experience: Experience [] = [];
+  constructor(private personService:PersonService, private experienceService:ExperienceService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{
-      this.about=data.about;
-      this.experienceList=data.experience;
+    this.personService.profile(1).subscribe(data =>{
+      this.person = data;
+    }),
+    this.experienceService.all().subscribe(data =>{
+      this.experience = data;
     });
+
   }
 
 }

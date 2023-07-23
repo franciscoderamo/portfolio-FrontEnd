@@ -3,13 +3,13 @@ import { identifierName } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 //import { environment } from 'src/environments/environment';
-import { Studies } from '../model/studies';
+import { Studies } from '../model/studies.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StudiesService {
-  URL = 'http://localhost:8080/studies/'; // 'https://portfolio-francisco-deramo.onrender.com/studies';
+  URL = 'https://portfolio-francisco-deramo.onrender.com/studies/'; // 'http://localhost:8080/studies/';
 
   //URL = environment.URL + 'studies/';
 

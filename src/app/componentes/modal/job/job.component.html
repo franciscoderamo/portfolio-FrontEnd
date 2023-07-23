@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="modal-header d-flex flex-row mb-3">
+    <h3>Administrar trabajos</h3>
+    <button class="button__add button__flex"><i class="uil uil-plus" routerLink="/new-job" title="Nuevo trabajo"></i></button>
+  </div>
+  <div class="container">
+    <table class="table">
+      <tbody>
+        <tr>
+          <td><b>ID</b></td>
+          <td><b>Trabajo</b></td>
+          <td><b>Empresa/institución</b></td>
+          <td><b>Año Inicio</b></td>
+          <td><b>Año Fin</b></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr *ngFor="let jobsList of jobs">
+          <td>{{jobsList.id}}</td>
+          <td>{{jobsList.job}}</td>
+          <td>{{jobsList.bussines}}</td>
+          <td>{{jobsList.start}}</td>
+          <td>{{jobsList.end}}</td>
+          <td><i class="uil uil-pen btn__edit" routerLink="/edit-job/{{jobsList.id}}" title="Editar"></i></td>
+          <td><i class="uil uil-trash-alt btn__delete" (click)="deleteJobs(jobsList.id)" title="Eliminar"></i></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

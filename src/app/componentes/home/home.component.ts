@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/services/data.service';
+import { Person } from 'src/app/model/person.model';
+import { PersonService } from 'src/app/services/person.service';
 
 @Component({
   selector: 'app-home',
@@ -7,13 +8,12 @@ import { PortfolioService } from 'src/app/services/data.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  miPortfolio:any;
-  constructor(private datosPortfolio:PortfolioService) { }
+  person!: Person;
+  constructor(private personService:PersonService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{
-      console.log(data);
-      this.miPortfolio=data.user;
+    this.personService.profile(1).subscribe(data =>{
+      this.person = data;
     });
   }
 

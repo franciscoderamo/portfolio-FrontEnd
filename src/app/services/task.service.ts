@@ -3,13 +3,13 @@ import { identifierName } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 //import { environment } from 'src/environments/environment';
-import { Task } from '../model/task';
+import { Task } from '../model/task.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TaskService {
-  URL = 'http://localhost:8080/task/'; // 'https://portfolio-francisco-deramo.onrender.com/task';
+  URL = 'https://portfolio-francisco-deramo.onrender.com/task/'; // 'http://localhost:8080/task/';
 
   //URL = environment.URL + 'task/';
 

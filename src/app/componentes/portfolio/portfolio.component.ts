@@ -1,6 +1,7 @@
 //import { ViewEncapsulation } from '@angular/compiler';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { PortfolioService } from 'src/app/services/data.service';
+import { Portfolio } from 'src/app/model/portfolio.model';
+import { PortfolioService } from 'src/app/services/portfolio.service';
 // import Swiper core and required modules
 import SwiperCore, { Navigation, Pagination } from 'swiper';
 
@@ -15,12 +16,12 @@ SwiperCore.use([Navigation, Pagination]);
   encapsulation: ViewEncapsulation.None,
 })
 export class PortfolioComponent implements OnInit {
-  portfolioList:any;
-  constructor(private datosPortfolio:PortfolioService) { }
+  portfolio: Portfolio [] = [];
+  constructor(private portfolioService:PortfolioService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{
-      this.portfolioList=data.portfolio;
+    this.portfolioService.all().subscribe(data =>{
+      this.portfolio = data;
     });
   }
 

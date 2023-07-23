@@ -3,15 +3,15 @@
     <div class="home__container container grid">
         <div class="home__content grid">
             <div class="home__social">
-                <a ref="https://www.linkedin.com/in/franciscoderamo/" target="_blank" class="home__social-icon">
+                <a href="{{person.linkedin}}" target="_blank" class="home__social-icon">
                     <i class="uil uil-linkedin-alt"></i>
                 </a>
 
-                <a ref="https://github.com/franciscoderamo" target="_blank" class="home__social-icon">
+                <a href="{{person.github}}" target="_blank" class="home__social-icon">
                     <i class="uil uil-github"></i>
                 </a>
 
-                <a ref="https://web.whatsapp.com/send?phone=5491159460205&text=Hola%20Francisco!%20Vi%20tu%20CV%20online%20y%20queria%20consultarte" target="_blank" class="home__social-icon">
+                <a href="https://web.whatsapp.com/send?phone=+{{person.whatsapp}}&text=Hola!%20Vimos%20tu%20CV%20online%20y%20queriamos%20consultarte" target="_blank" class="home__social-icon">
                     <i class="uil uil-whatsapp"></i>
                 </a>
             </div>
@@ -37,9 +37,9 @@
                   </svg>
             </div>
             <div class="home__data">
-                <h1 class="home__title">Hola, soy {{miPortfolio.name}}</h1>
-                <h3 class="home__subtitle">{{miPortfolio.resume}}</h3>
-                <p class="home__description">{{miPortfolio.description}}</p>
+                <h1 class="home__title">Hola, soy {{person.name}}</h1>
+                <h3 class="home__subtitle">{{person.resume}}</h3>
+                <p class="home__description">{{person.description}}</p>
                 <a href="#contact" class="button button__flex">
                     Convercemos <i class="uil uil-whatsapp button__icon"></i>
                 </a>

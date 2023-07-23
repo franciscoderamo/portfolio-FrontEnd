@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="modal-header d-flex flex-row mb-3">
+    <h3>Administrar habilidades</h3>
+    <button class="button__add button__flex"><i class="uil uil-plus" routerLink="/new-skill" title="Nueva categoría"></i></button>
+  </div>
+  <div class="container">
+    <table class="table">
+      <tbody>
+        <tr>
+          <td><b>ID</b></td>
+          <td><b>Porcentage</b></td>
+          <td><b>Title</b></td>
+          <td><b>ID categoría</b></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr *ngFor="let skillList of skill">
+          <td>{{skillList.id}}</td>
+          <td>{{skillList.porcentage}}%</td>
+          <td>{{skillList.title}}</td>
+          <td>{{skillList.idSkillGroup}}</td>
+          <td><i class="uil uil-pen btn__edit" routerLink="/edit-skill/{{skillList.id}}" title="Editar"></i></td>
+          <td><i class="uil uil-trash-alt btn__delete" (click)="deleteSkill(skillList.id)" title="Eliminar"></i></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
