@@ -9,8 +9,8 @@ import { SkillGroup } from '../model/skill-group.model';
   providedIn: 'root'
 })
 export class SkillGroupService {
-  URL = 'https://portfolio-francisco-deramo.onrender.com/skillgroup/'; // 'http://localhost:8080/skillgroup/';
-
+  URL = 'https://portfolio-francisco-deramo.onrender.com/skillgroup/';
+  //URL = 'http://localhost:8080/skillgroup/';
   //URL = environment.URL + 'skillgroup/';
 
   constructor(private httpClient: HttpClient) { }

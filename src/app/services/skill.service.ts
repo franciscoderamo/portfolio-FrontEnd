@@ -10,8 +10,8 @@ import { Skill } from '../model/skill.model';
 })
 
 export class SkillService {
-  URL = 'https://portfolio-francisco-deramo.onrender.com/skill/'; //'http://localhost:8080/skill/';
-
+  URL = 'https://portfolio-francisco-deramo.onrender.com/skill/';
+  //URL = 'http://localhost:8080/skill/';
   //URL = environment.URL + 'skill/';
 
   constructor(private httpClient: HttpClient) { }

@@ -9,8 +9,8 @@ import { Services } from '../model/services.model';
   providedIn: 'root'
 })
 export class ServicesService {
-  URL = 'https://portfolio-francisco-deramo.onrender.com/services/'; // 'http://localhost:8080/services/';
-
+  URL = 'https://portfolio-francisco-deramo.onrender.com/services/';
+  //URL = 'http://localhost:8080/services/';
   //URL = environment.URL + 'services/';
 
   constructor(private httpClient: HttpClient) { }

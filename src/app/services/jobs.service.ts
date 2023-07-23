@@ -9,7 +9,8 @@ import { Jobs } from '../model/jobs.model';
   providedIn: 'root'
 })
 export class JobsService {
-  URL = 'https://portfolio-francisco-deramo.onrender.com/jobs/'; // 'http://localhost:8080/jobs/';
+  URL = 'https://portfolio-francisco-deramo.onrender.com/jobs/';
+  //URL = 'http://localhost:8080/jobs/';
 
   //URL = environment.URL + 'jobs/';
 
