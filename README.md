@@ -4,6 +4,15 @@
 ## Screenshot Responsive Portfolio Website
 ![Screenshot](https://github.com/franciscoderamo/portfolio-FrontEnd/blob/main/src/assets/img/Responsive%20Portfolio%20Website.png)
 
+## Screenshot Dashboard Portfolio Website
+![Screenshot](https://github.com/franciscoderamo/portfolio-FrontEnd/blob/main/src/assets/img/Panel%20de%20administracion%20Portfolio%20Website.png)
+
+## Screenshot Form Add Portfolio Website
+![Screenshot](https://github.com/franciscoderamo/portfolio-FrontEnd/blob/main/src/assets/img/Formulario%20Agregar%20Portfolio%20Website.png)
+
+## Screenshot Form Edit Portfolio Website
+![Screenshot](https://github.com/franciscoderamo/portfolio-FrontEnd/blob/main/src/assets/img/Formulario%20Editar%20Portfolio%20Website.png)
+
 # Portfolio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.

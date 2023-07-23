@@ -24,7 +24,7 @@
   },{
     "titulo": "Servicios",
     "icon": "uil-briefcase-alt nav__icon",
-    "url": "o#services"
+    "url": "#services"
   },{
     "titulo": "Portfolio",
     "icon": "uil-scenery nav__icon",
