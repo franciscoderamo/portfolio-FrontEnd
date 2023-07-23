@@ -1,0 +1,37 @@
+<app-header></app-header>
+<div class="container mt-5" *ngIf="portfolio">
+    <div class="mt-5 mb-2">
+      <br><br>
+      <h2>Modificar portfolio</h2>
+      <hr>
+    </div>
+    <form class="row g-3 mt-2" (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+      <div class="col-md-4">
+        <label for="inputTitle" class="form-label">Título</label>
+        <input type="text" class="form-control" id="inputTitle" name="inputTitle" [(ngModel)]="portfolio.title" [placeholder]="portfolio.title" required>
+      </div>
+      <div class="col-md-8">
+        <label for="inputDescription" class="form-label">Descripción</label>
+        <input type="text" class="form-control" id="inputDescription" name="inputDescription" [(ngModel)]="portfolio.description" [placeholder]="portfolio.description" required>
+      </div>
+      <div class="col-md-5">
+        <label for="inputImage" class="form-label">URL imagen</label>
+        <input type="text" class="form-control" id="inputImage" name="inputImage" [(ngModel)]="portfolio.image" [placeholder]="portfolio.image" required>
+      </div>
+      <div class="col-md-5">
+        <label for="inputLink" class="form-label">Enlace</label>
+        <input type="text" class="form-control" id="inputLink" name="inputLink" [(ngModel)]="portfolio.link" [placeholder]="portfolio.link" required>
+      </div>
+      <div class="col-md-2">
+        <label for="inputIdService" class="form-label">ID Servicio *</label>
+        <input type="number" class="form-control" id="inputIdService" name="inputIdService" maxlength="2" [(ngModel)]="portfolio.idService" [placeholder]="portfolio.idService" required>
+      </div>
+      <div>
+        <p>* Para ingresar un portfolio, primero debe crear un servicio asociado, a la cual se le asignará un ID que debe ingresarlo aquí para vincularlo.</p>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="button button__flex">Enviar <i class="uil uil-message button__icon"></i></button>
+      </div>
+    </form>
+  </div>
+<app-footer></app-footer>

@@ -3,14 +3,14 @@ import { identifierName } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 //import { environment } from 'src/environments/environment';
-import { Skill } from '../model/skill';
+import { Skill } from '../model/skill.model';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class SkillService {
-  URL = 'http://localhost:8080/skill/'; // 'https://portfolio-francisco-deramo.onrender.com/skill/';
+  URL = 'https://portfolio-francisco-deramo.onrender.com/skill/'; //'http://localhost:8080/skill/';
 
   //URL = environment.URL + 'skill/';
 

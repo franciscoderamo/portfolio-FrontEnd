@@ -2,13 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 //import { environment } from 'src/environments/environment';
-import { Experience } from '../model/experience';
+import { Experience } from '../model/experience.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ExperienceService {
-  URL = 'http://localhost:8080/experience/'; // 'https://portfolio-francisco-deramo.onrender.com/experience/';
+  URL = 'https://portfolio-francisco-deramo.onrender.com/experience/'; //  'http://localhost:8080/experience/';
 
   //URL = environment.URL + 'experience/';
 

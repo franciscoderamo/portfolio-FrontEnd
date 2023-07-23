@@ -1,20 +1,34 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/services/data.service';
+import { Jobs } from 'src/app/model/jobs.model';
+import { Studies } from 'src/app/model/studies.model';
+import { JobsService } from 'src/app/services/jobs.service';
+import { StudiesService } from 'src/app/services/studies.service';
 
 @Component({
   selector: 'app-qualification',
   templateUrl: './qualification.component.html',
   styleUrls: ['./qualification.component.css']
 })
+
 export class QualificationComponent implements OnInit {
-  miPortfolio:any;
-  constructor(private datosPortfolio:PortfolioService) { }
+
+  studies: Studies [] = [];
+  jobs: Jobs [] = [];
+
+  constructor(private studiesService:StudiesService, private jobsService: JobsService) {
+  }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{
-      console.log(data);
-      this.miPortfolio=data;
+    this.studiesService.all().subscribe(data =>{
+      this.studies=data;
+    }),
+    this.jobsService.all().subscribe(data =>{
+      this.jobs=data;
     });
+  }
+
+  rastrearPor(indice: number, elemento: number) {
+    console.log(indice, elemento);
   }
 
 }

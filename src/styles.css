@@ -293,8 +293,15 @@ img {
   bottom: 0;
 }
 
-/* Active link */
-
+/* Dashboard icons */
+.btn__edit{
+  color: rgb(1, 123, 216);
+  cursor: pointer;
+}
+.btn__delete{
+  color: red;
+  cursor: pointer;
+}
 
 /* Change background header */
 
@@ -380,7 +387,7 @@ img {
 }
 
 /*==================== BUTTONS ====================*/
-.button{
+.button, .button__add{
   display: inline-block;
   background-color: var(--first-color);
   color: #FFF;
@@ -392,6 +399,10 @@ img {
 .button:hover{
   background-color: var(--first-color-alt);
   color: #FFF;
+}
+
+.button__add{
+  padding: 0.2rem;
 }
 
 .button__icon{
@@ -483,6 +494,10 @@ img {
 
 .skills__icon{
   margin-right: var(--mb-0-75);
+}
+.skillGroup__icon {
+  font-size: 1rem;
+  color: var(--first-color);
 }
 
 .skills__title{
@@ -937,6 +952,48 @@ img {
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--text-color-light);
 }
+
+/*==================== DASHBOARD ====================*/
+.accordion-item {
+  color: black;
+}
+
+.list__item tr td{
+  padding: 10px 0;
+  border-bottom: 1px solid #a3a3a3;
+}
+
+.dashboard__container{
+  row-gap: 0;
+}
+
+.dashboard__header{
+  display: flex;
+  align-items: center;
+  /*margin-bottom: var(--mb-2-5);*/
+  cursor: pointer;
+}
+
+.dashboard__icon,
+.dashboard__arrow{
+  font-size: 2rem;
+  color: var(--first-color);
+}
+
+.dashboard__icon{
+  margin-right: var(--mb-0-75);
+}
+
+.dashboard__title{
+  font-size: var(--h3-font-size);
+  margin-bottom: 0px;
+}
+
+.dashboard__subtitle{
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
 
 /*==================== MEDIA QUERIES ====================*/
 

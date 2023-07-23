@@ -3,13 +3,13 @@ import { identifierName } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 //import { environment } from 'src/environments/environment';
-import { SkillGroup } from '../model/skill-group';
+import { SkillGroup } from '../model/skill-group.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SkillGroupService {
-  URL = 'http://localhost:8080/skillgroup/'; // 'https://portfolio-francisco-deramo.onrender.com/skillgroup/';
+  URL = 'https://portfolio-francisco-deramo.onrender.com/skillgroup/'; // 'http://localhost:8080/skillgroup/';
 
   //URL = environment.URL + 'skillgroup/';
 

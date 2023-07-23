@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="modal-header d-flex flex-row mb-3">
+    <h3>Administrar estudios</h3>
+    <button class="button__add button__flex"><i class="uil uil-plus" routerLink="/new-study" title="Nuevo estudio"></i></button>
+  </div>
+  <div class="container">
+    <table class="table">
+      <tbody>
+        <tr>
+          <td><b>ID</b></td>
+          <td><b>Carrera/Curso</b></td>
+          <td><b>Instituto</b></td>
+          <td><b>Año Inicio</b></td>
+          <td><b>Año Fin</b></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr *ngFor="let studiesList of studies">
+          <td>{{studiesList.id}}</td>
+          <td>{{studiesList.carrer}}</td>
+          <td>{{studiesList.institution}}</td>
+          <td>{{studiesList.start}}</td>
+          <td>{{studiesList.end}}</td>
+          <td><i class="uil uil-pen btn__edit" routerLink="/edit-study/{{studiesList.id}}" title="Editar"></i></td>
+          <td><i class="uil uil-trash-alt btn__delete" (click)="deleteStudies(studiesList.id)" title="Eliminar"></i></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

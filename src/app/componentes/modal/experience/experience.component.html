@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="modal-header d-flex flex-row mb-3">
+    <h3>Administrar experiencia laboral</h3>
+    <button class="button__add button__flex"><i class="uil uil-plus" routerLink="/new-experience" title="Nueva experiencia"></i></button>
+  </div>
+  <div class="container">
+    <table class="table">
+      <tbody>
+        <tr>
+          <td><b>ID</b></td>
+          <td><b>Posición</b></td>
+          <td><b>Años</b></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr *ngFor="let esperienceList of experience">
+          <td>{{esperienceList.id}}</td>
+          <td>{{esperienceList.position}}</td>
+          <td>{{esperienceList.ages}}</td>
+          <td><i class="uil uil-pen btn__edit" routerLink="/edit-experience/{{esperienceList.id}}" title="Editar"></i></td>
+          <td><i class="uil uil-trash-alt btn__delete" (click)="deleteExperience(esperienceList.id)" title="Eliminar"></i></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

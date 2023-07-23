@@ -1,0 +1,87 @@
+<app-header></app-header>
+  <div class="container mt-5">
+    <div class="mt-5 mb-2">
+      <br><br>
+      <h2>Modificar datos personales</h2>
+      <hr>
+    </div>
+    <form class="row g-3 mt-2" (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+      <div class="col-md-4">
+        <label for="imputName" class="form-label">Nombre completo</label>
+        <input type="text" class="form-control" id="imputName" name="imputName" [(ngModel)]="person.name" [placeholder]="person.name" required>
+      </div>
+      <div class="col-md-8">
+        <label for="imputResume" class="form-label">Resumen</label>
+        <input type="text" class="form-control" id="imputResume" name="imputResume" maxlength="60" [(ngModel)]="person.resume" [placeholder]="person.resume" required>
+      </div>
+      <div class="col-12">
+        <label for="inputDescription" class="form-label">Descripción</label>
+        <textarea class="form-control" id="inputDescription" name="inputDescription" rows="3" maxlength="150" [(ngModel)]="person.description" [placeholder]="person.description" required></textarea>
+      </div>
+      <div class="col-12">
+        <label for="inputAbout" class="form-label">Sobre mí</label>
+        <textarea class="form-control" id="inputAbout" name="inputAbout" rows="5" maxlength="250" [(ngModel)]="person.about" [placeholder]="person.about" required></textarea>
+      </div>
+      <div class="col-12">
+        <label for="inputImage" class="form-label">Enlace a imagen de perfil</label>
+        <input type="text" class="form-control" id="inputImage" name="inputImage" maxlength="200" [(ngModel)]="person.image" [placeholder]="person.image" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputWhatsapp" class="form-label">Whatsapp</label>
+        <input type="number" class="form-control" id="inputWhatsapp" name="inputWhatsapp" minlength="13" maxlength="13" [(ngModel)]="person.whatsapp" [placeholder]="person.whatsapp" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputGithub" class="form-label">GitHub</label>
+        <input type="text" class="form-control" id="inputGithub" name="inputGithub" minlength="10" maxlength="100" [(ngModel)]="person.github" [placeholder]="person.github" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputLinkedin" class="form-label">Linkedin</label>
+        <input type="text" class="form-control" id="inputLinkedin" name="inputLinkedin" minlength="10" maxlength="100" [(ngModel)]="person.linkedin" [placeholder]="person.linkedin" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail" name="inputEmail" minlength="6" maxlength="100" [(ngModel)]="person.email" [placeholder]="person.email" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputUbication" class="form-label">Ciudad</label>
+        <select id="inputUbication" class="form-select" name="inputUbication" [(ngModel)]="person.ubication" required>
+          <option selected disabled>Elige...</option>
+          <option>Ciudad de Buenos Aires</option>
+          <option>Buenos Aires</option>
+          <option>Catamarca</option>
+          <option>Chaco</option>
+          <option>Chubut</option>
+          <option>Córdoba</option>
+          <option>Corrientes</option>
+          <option>Entre Ríos</option>
+          <option>Formosa</option>
+          <option>Jujuy</option>
+          <option>La Pampa</option>
+          <option>La Rioja</option>
+          <option>Mendoza</option>
+          <option>Misiones</option>
+          <option>Neuquén</option>
+          <option>Río Negro</option>
+          <option>Salta</option>
+          <option>San Juan</option>
+          <option>San Luis</option>
+          <option>Santa Cruz</option>
+          <option>Santa Fe</option>
+          <option>Santiago del Estero</option>
+          <option>Tierra del Fuego, Antártida e Islas del Atlántico Sur</option>
+          <option>Tucumán</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="inputCountry" class="form-label">País</label>
+        <select id="inputCountry" class="form-select" name="inputCountry" [(ngModel)]="person.country" required>
+          <option selected disabled>Elige...</option>
+          <option selected>Argentina</option>
+        </select>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="button button__flex">Actualizar <i class="uil uil-message button__icon"></i></button>
+      </div>
+    </form>
+  </div>
+<app-footer></app-footer>
