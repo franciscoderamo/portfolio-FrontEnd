@@ -9,9 +9,9 @@ import { Task } from '../model/task.model';
   providedIn: 'root'
 })
 export class TaskService {
-  URL = 'https://portfolio-francisco-deramo.onrender.com/task/'; // 'http://localhost:8080/task/';
-
-  //URL = environment.URL + 'task/';
+  URL = 'https://portfolio-francisco-deramo.onrender.com/task/';
+  // URL = 'http://localhost:8080/task/';
+  // URL = environment.URL + 'task/';
 
   constructor(private httpClient: HttpClient) { }
 

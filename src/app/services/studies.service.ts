@@ -9,8 +9,8 @@ import { Studies } from '../model/studies.model';
   providedIn: 'root'
 })
 export class StudiesService {
-  URL = 'https://portfolio-francisco-deramo.onrender.com/studies/'; // 'http://localhost:8080/studies/';
-
+  URL = 'https://portfolio-francisco-deramo.onrender.com/studies/';
+  //URL = 'http://localhost:8080/studies/';
   //URL = environment.URL + 'studies/';
 
   constructor(private httpClient: HttpClient) { }

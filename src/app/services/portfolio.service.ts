@@ -10,8 +10,8 @@ import { Portfolio } from '../model/portfolio.model';
 })
 export class PortfolioService {
 
-  URL = 'https://portfolio-francisco-deramo.onrender.com/portfolio/'; // 'http://localhost:8080/portfolio/';
-
+  URL = 'https://portfolio-francisco-deramo.onrender.com/portfolio/';
+  //URL = 'http://localhost:8080/portfolio/';
   //URL = environment.URL + 'portfolio/';
 
   constructor(private httpClient: HttpClient) { }

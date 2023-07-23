@@ -9,7 +9,8 @@ import { Person } from '../model/person.model';
 })
 export class PersonService {
 
-  URL = 'https://portfolio-francisco-deramo.onrender.com/person/'; // 'http://localhost:8080/person/';
+  URL = 'https://portfolio-francisco-deramo.onrender.com/person/';
+  //URL = 'http://localhost:8080/person/';
 
   //URL = environment.URL + 'person/';
 
